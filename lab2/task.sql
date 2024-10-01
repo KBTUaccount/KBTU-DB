@@ -42,7 +42,7 @@ INSERT INTO countries DEFAULT VALUES;
 CREATE TABLE countries_new (LIKE countries INCLUDING ALL);
 
 --11
-    INSERT INTO countries_new
+INSERT INTO countries_new
     SELECT * FROM countries;
 
 --12
@@ -57,7 +57,7 @@ RETURNING country_name, population AS "New Population";
 
 --14
 DELETE FROM countries
-WHERE population < 100000;
+WHERE population > 100;
 
 --15
 DELETE FROM countries_new
