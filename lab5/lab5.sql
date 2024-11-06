@@ -49,14 +49,14 @@ SELECT MIN(purch_amt) FROM orders;
 
 --7
 SELECT * FROM customers
-WHERE cust_name LIKE '%b';
+WHERE cust_name LIKE '%y%';
 
 --8
 SELECT * FROM orders
 WHERE customer_id IN (
     SELECT customer_id
     FROM customers
-    WHERE city = 'New York'
+    WHERE city <> 'New York'
 );
 
 --9
